@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>REGEX</title>
+</head>
+<body>
+    <h1>CHECK CONSOLE</h1>
+  <script>
+        //1a. Cat and car
+    const test1 = /ca[rt]/;
+    console.log(test1.test("car"));
+    console.log(test1.test("cat"));
+
+
+       //1b. pop and prop
+    const test2 = /p[op]/;
+    console.log(test2.test("pop"));
+    console.log(test2.test("prop"));
+
+
+       //1c. ferret, ferry, and ferrari
+    const test3 = /ferr[ey]|ferret/;
+    console.log(test3.test("ferret"));
+    console.log(test3.test("ferry"));
+    console.log(test3.test("ferrari"));
+
+
+
+       //1d.Any word ending in ious
+    const test4 = /\w+ious\b/;
+    console.log(test4.test("superstitious"));
+    console.log(test4.test("unpretentious"));
+    console.log(test4.test("pretentious"));
+
+        //1e. A whitespace character followed by a period, comma, colon, or semicolon
+    const test5 = /\s(?=[:;,.])/;
+    console.log(test5.test(" ."));
+    console.log(test5.test("\t,"));
+    console.log(test5.test("text:"));
+
+        //1f.A word longer than six letters
+    const test6 = /\w{7,}/;
+    console.log(test6.test("tiidelab"));
+    console.log(test6.test("ccat"));
+
+        //1g. A word without the letter e (or E)
+    const test7 = /[^eE\s]+/;
+    console.log(test7.test("aerosoft"));
+    console.log(test7.test("Energy"));
+    console.log(test7.test("somalia"));
+
+        //2. Quotting style
+
+
+        //3.Number Again
+    const test9 = /^[+-]?(?:\d+\.\d*|\.\d+|\d+)(?:[eE][+-]?\d+)?$/;
+    console.log(test9.test(".");
+  </script>
+</body>
